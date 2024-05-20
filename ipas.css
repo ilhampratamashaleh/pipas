@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(158, 156, 156, 0.8);
+    padding: 1rem 2rem;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    font-size: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#hamburger {
+    margin-right: 100%;
+}
+
+.hamburger {
+    visibility: visible;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 230px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.nav-menu {
+    display: block;
+    float: right;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-menu ul li:first-child {
+    margin-left: 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.nav-menu ul li a:hover {
+    color: #cccccc;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        float: right;
+        margin-right: -100px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(158, 156, 156, 0.8);
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu.active ul {
+        display: block;
+    }
+
+    .nav-menu ul {
+        padding: 20px 0;
+    }
+
+    .nav-menu ul li {
+        display: block;
+        margin: 20px 0;
+    }
+}
+
+.slide {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f06, #f90);
+    color: white;
+}
+
+#services {
+    background: linear-gradient(135deg, #06f, #90f);
+}
+
+#portfolio {
+    background: linear-gradient(135deg, rgba(160, 174, 152, 0.929)) rgba(18, 28, 4, 0.826);
+    height: 60%;
+}
+
+#contact {
+    background: linear-gradient(135deg, #0f6, #0f9);
+    width: auto;
+    height: 60%;
+}
+
+.services-container,
+.portfolio-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.service,
+.portfolio-container img {
+    margin: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s;
+    width: auto;
+    height: auto;
+}
+
+.service:hover,
+.portfolio-container img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.slide {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+/* #pic-1 {
+    width: 80%;
+    height: 60%;
+}
+
+#pic-2 {
+    width: 70%;
+    height: 50%;
+}
+
+#pic-3 {
+    width: 80%;
+    height: 60%;
+} */
+
+.portfolio-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+/* Additional CSS to ensure the hamburger menu is visible */
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 230px;
+    visibility: visible;
+}
